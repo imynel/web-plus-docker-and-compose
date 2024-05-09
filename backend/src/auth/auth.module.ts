@@ -20,7 +20,7 @@ import { LocalStrategy } from './local/local.strategy';
 
       // фабрика для настройки JwtModule
       useFactory: async (configService: ConfigService) => ({
-        secret: configService.get<string>('jwt.secret'), // получаем ключ из конфигурации
+        secret: configService.get<string>('JWT_SECRET'), // получаем ключ из конфигурации
       }),
       inject: [ConfigService],
     }),
